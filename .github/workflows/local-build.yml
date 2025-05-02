@@ -55,7 +55,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js via apt-get in container
+      - name: Set up Node.js
         run: |
           apt-get update
           apt-get install -y nodejs npm
@@ -173,3 +173,4 @@ jobs:
         with:
           name: artifact-${{ env.artifact_name }}
           path: ${{ env.build_dir }}/artifacts
+
