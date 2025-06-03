@@ -19,6 +19,15 @@
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
+
+        windows_sleep: windows_sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X) &kp U &kp S>;
+            label = "WINDOWS_SLEEP";
+            wait-ms = <50>;
+            tap-ms = <5>;
+        };
     };
 
     macros {
@@ -70,11 +79,11 @@
             //                     |      |      |      |        |          | DEL  |       |       |
 
             bindings = <
-&trans  &kp EXCL  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &trans  &trans
-&trans  &trans    &kp LBRC  &kp LBKT   &kp LPAR   &to 0                        &to 1      &kp RPAR  &kp RBKT   &kp RBRC   &trans  &trans
-&trans  &trans    &trans    &kp MINUS  &kp EQUAL  &trans                       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans    &trans    &kp LT     &trans     &trans     &trans    &trans  &trans     &trans    &kp GT     &trans     &trans  &trans
-                            &trans     &trans     &trans     &trans    &trans  &kp DEL    &trans    &trans
+&windows_sleep  &kp EXCL  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &trans  &trans
+&trans          &trans    &kp LBRC  &kp LBKT   &kp LPAR   &to 0                        &to 1      &kp RPAR  &kp RBKT   &kp RBRC   &trans  &trans
+&trans          &trans    &trans    &kp MINUS  &kp EQUAL  &trans                       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&trans          &trans    &trans    &kp LT     &trans     &trans     &trans    &trans  &trans     &trans    &kp GT     &trans     &trans  &trans
+                                    &trans     &trans     &trans     &trans    &trans  &kp DEL    &trans    &trans
             >;
         };
 
