@@ -25,7 +25,7 @@
             #binding-cells = <0>;
             bindings = <&kp LG(X) &kp U &kp S>;
             label = "WINDOWS_SLEEP";
-            wait-ms = <50>;
+            wait-ms = <250>;
             tap-ms = <5>;
         };
     };
